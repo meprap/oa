@@ -1,0 +1,21 @@
+.dropdown-menu {
+    width: 200px;
+    background: $color-dropdown;
+    border: 0;
+    padding: 0;
+    &>li {
+        border-bottom: 1px solid $color-dropdown-child-border;
+        &>a {
+            color: $color-white;
+            padding: 10px 20px;
+            @include word-wrap;
+            &:hover {
+                background: darken($color-dropdown, 30%);
+                color: $color-brand-primary;
+            }
+        }
+        &:last-child {
+            border: 0;
+        }
+    }
+}

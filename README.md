@@ -1,2 +1,1 @@
-# oa
-Online Aushadhi
+# Online Aushadi

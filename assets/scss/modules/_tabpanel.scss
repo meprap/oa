@@ -1,0 +1,40 @@
+.nav-tabs {
+    border: 0;
+    @extend %list-none;
+    padding-top: 20px;
+    li {
+        position: relative;
+        display: inline-block;
+        margin: 0 35px 0 0;
+        vertical-align: middle;
+        &:after {
+            content: '|';
+            position: absolute;
+            top: 50%;
+            right: -18px;
+            margin-top: -13px;
+        }
+        &:last-child {
+            margin: 0;
+            &:after {
+                content: '';
+            }
+        }
+        a {
+            background: none;
+            border: 0;
+            @include font($header-font, normal, 400);
+            @include font-size(1.8);
+            padding: 0;
+            &:hover {
+                background: none;
+            }
+        }
+        &.active {
+            a {
+                background: none;
+                color: $color-brand-primary;
+            }
+        }
+    }
+}

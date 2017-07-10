@@ -1,0 +1,110 @@
+#off-canvas-nav {
+    background: $color-off-canvas-nav;
+    width: 250px;
+    height: 100%;
+    position: fixed;
+    z-index: 100;
+    right: -250px;
+    text-align: left;
+    overflow-x: hidden;
+    @include transition(all, .5s, ease-out);
+    .shade-wrap {
+        position: absolute;
+        width: 25px;
+        height: 100%;
+        top: 0;
+        left: 0;
+        z-index: 10;
+    }
+    &>.navbar-nav {
+        position: relative;
+        z-index: 9;
+        float: none;
+        padding: 0;
+        margin: 0;
+        display: block;
+        li {
+            display: block;
+            float: none;
+            border-bottom: 1px solid $color-off-canvas-nav-border;
+            padding: 10px 0 7px;
+            a {
+                background: transparent;
+                text-transform: uppercase;
+                display: inline-block;
+                @include font-size(1.4);
+                color: $color-link;
+                line-height: 1.5;
+                @include word-wrap;
+                padding: 0 25px;
+                &:hover {
+                    background-color: transparent;
+                    color: $color-brand-primary;
+                }
+                &.shop-now {
+                    border-color: $color-link;
+                    margin-left: 20px;
+                    margin-bottom: 4px;
+                }
+            }
+            &.active {
+                a {
+                    background-color: transparent;
+                    color: $color-active;
+                    &:hover {
+                        background-color: transparent;
+                        color: $color-link-hover;
+                    }
+                    &:focus {
+                        background-color: transparent;
+                        color: $color-focus;
+                    }
+                }
+            }
+            &.dropdown {
+                //padding: 0;
+                a {
+                    i {
+                        @include font-size(1.2);
+                        vertical-align: middle;
+                        margin-left: 5px;
+                    }
+                }
+            }
+            .dropdown-menu {
+                width: 100%;
+                min-width: 100%;
+                position: relative;
+                top: 0;
+                left: 0;
+                padding: 0;
+                margin: 0;
+                float: none;
+                li {
+                    border-top: 1px solid $color-off-canvas-nav-border;
+                    border-bottom: 0;
+                    padding: 0;
+                    margin: 0;
+                    a {
+                        text-transform: none;
+                        padding: 10px 25px 7px 45px;
+                        &.shop-now {
+                            margin-top: 10px;
+                            margin-bottom: 10px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .close {
+        float: none;
+        display: block;
+        padding: 25px 20px 15px;
+        text-align: left;
+        @include font-size(3);
+        color: $color-black;
+        @include opacity(1);
+        @include text-shadow(0 0 0);
+    }
+}

@@ -1,0 +1,76 @@
+#banner {
+    @include linear-gradient-l2br(135deg, #1E3C72, #2A5298);
+    height: 375px;
+    position: relative;
+    overflow: hidden;
+    .img-1,
+    .img-2 {
+        @include opacity(.5);
+        img {
+            width: 100%;
+        }
+    }
+    .img-1 {
+        width: 100%;
+        @include absPosition(auto,auto,-65px,0);
+        z-index: 1;
+    }
+}
+
+#myCarousel {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    .carousel-inner,
+    .carousel,
+    .item,
+    .fill,
+    .active {
+        height: 100%;
+    }
+    .fill {
+        width: 100%;
+        /*@include cover-background('../img/001.jpg', center center, scroll);*/
+        @include cover-background('../img/001.jpg');
+    }
+    .banner-overlay {
+        background: black(.5);
+        @include coverer;
+        @include absPosition(0, auto, auto, 0);
+        z-index: 1;
+        @include centerer;
+    }
+}
+
+.carousel-caption {
+    text-align: left;
+    left: auto;
+    right: auto;
+}
+
+// For Fading Carousel
+.carousel-fade {
+    .carousel-inner {
+        .item {
+            @include transitionProperty(opacity);
+        }
+        .item,
+        .active.left,
+        .active.right {
+            @include opacity(0);
+        }
+        .active,
+        .next.left,
+        .prev.right {
+            @include opacity(1);
+        }
+        .next,
+        .prev,
+        .active.left,
+        .active.right {
+            left: 0;
+            transform: translate3d(0, 0, 0);
+        }
+    }
+}

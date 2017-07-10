@@ -1,0 +1,13 @@
+html,
+body {
+    height: 100%;
+}
+
+body {
+    background-color: $color-background;
+    @include font($base-font, normal, 400);
+    @include font-size(1.4);
+    @include font-smoothing(on);
+    line-height: 1.8;
+    color: $color-base;
+}

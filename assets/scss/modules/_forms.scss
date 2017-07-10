@@ -1,0 +1,14 @@
+.form-control {
+    height: auto;
+    padding: 12px 12px 10px;
+    @include font-size(1.5);
+}
+
+input[type=email],
+input[type=text],
+input[type=password],
+textarea {
+    @include placeholder {
+        color: green;
+    }
+}

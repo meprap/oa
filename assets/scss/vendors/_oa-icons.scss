@@ -1,0 +1,158 @@
+@import "oa-icons/variables";
+
+@font-face {
+  font-family: 'onlineaushadhi';
+  src:  url('#{$oa-font-path}/onlineaushadhi.eot?lnl21g');
+  src:  url('#{$oa-font-path}/onlineaushadhi.eot?lnl21g#iefix') format('embedded-opentype'),
+    url('#{$oa-font-path}/onlineaushadhi.ttf?lnl21g') format('truetype'),
+    url('#{$oa-font-path}/onlineaushadhi.woff?lnl21g') format('woff'),
+    url('#{$oa-font-path}/onlineaushadhi.svg?lnl21g#onlineaushadhi') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="oa-"], [class*=" oa-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'onlineaushadhi' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.oa-close {
+  &:before {
+    content: $oa-close;
+  }
+}
+.oa-first-aid {
+  &:before {
+    content: $oa-first-aid;
+  }
+}
+.oa-pin {
+  &:before {
+    content: $oa-pin;
+  }
+}
+.oa-checkbox {
+  &:before {
+    content: $oa-checkbox;
+  }
+}
+.oa-mail {
+  &:before {
+    content: $oa-mail;
+  }
+}
+.oa-arrow-right {
+  &:before {
+    content: $oa-arrow-right;
+  }
+}
+.oa-calendar {
+  &:before {
+    content: $oa-calendar;
+  }
+}
+.oa-linkedin {
+  &:before {
+    content: $oa-linkedin;
+  }
+}
+.oa-alarm {
+  &:before {
+    content: $oa-alarm;
+  }
+}
+.oa-pinterest {
+  &:before {
+    content: $oa-pinterest;
+  }
+}
+.oa-arrow-left {
+  &:before {
+    content: $oa-arrow-left;
+  }
+}
+.oa-flask {
+  &:before {
+    content: $oa-flask;
+  }
+}
+.oa-gplus {
+  &:before {
+    content: $oa-gplus;
+  }
+}
+.oa-menu {
+  &:before {
+    content: $oa-menu;
+  }
+}
+.oa-previous {
+  &:before {
+    content: $oa-previous;
+  }
+}
+.oa-upload {
+  &:before {
+    content: $oa-upload;
+  }
+}
+.oa-arrow-down {
+  &:before {
+    content: $oa-arrow-down;
+  }
+}
+.oa-search {
+  &:before {
+    content: $oa-search;
+  }
+}
+.oa-arrow-up {
+  &:before {
+    content: $oa-arrow-up;
+  }
+}
+.oa-call {
+  &:before {
+    content: $oa-call;
+  }
+}
+.oa-next {
+  &:before {
+    content: $oa-next;
+  }
+}
+.oa-star-half {
+  &:before {
+    content: $oa-star-half;
+  }
+}
+.oa-star {
+  &:before {
+    content: $oa-star;
+  }
+}
+.oa-twitter {
+  &:before {
+    content: $oa-twitter;
+  }
+}
+.oa-facebook {
+  &:before {
+    content: $oa-facebook;
+  }
+}
+.oa-youtube {
+  &:before {
+    content: $oa-youtube;
+  }
+}

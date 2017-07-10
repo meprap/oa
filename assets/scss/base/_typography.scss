@@ -1,0 +1,81 @@
+// Header Tags
+h1 {
+    @include font-size(4.5);
+    @extend %heading;
+    @include breakpoint(md) {
+        @include font-size(4.2);
+    }
+    @include breakpoint(xs) {
+        @include font-size(3.9);
+    }
+}
+
+h2 {
+    @include font-size(4);
+    @extend %heading;
+    @include breakpoint(md) {
+        @include font-size(3.7);
+    }
+    @include breakpoint(xs) {
+        @include font-size(3.4);
+    }
+}
+
+h3 {
+    @include font-size(3.5);
+    @extend %heading;
+    @include breakpoint(md) {
+        @include font-size(3.2);
+    }
+    @include breakpoint(xs) {
+        @include font-size(2.9);
+    }
+}
+
+h4 {
+    @include font-size(3);
+    @extend %heading;
+    @include breakpoint(md) {
+        @include font-size(2.7);
+    }
+    @include breakpoint(xs) {
+        @include font-size(2.4);
+    }
+}
+
+h5 {
+    @include font-size(2.5);
+    @extend %heading;
+    @include breakpoint(md) {
+        @include font-size(2.2);
+    }
+    @include breakpoint(xs) {
+        @include font-size(1.9);
+    }
+}
+
+h6 {
+    @include font-size(2);
+    @extend %heading;
+    @include breakpoint(md) {
+        @include font-size(1.7);
+    }
+    @include breakpoint(xs) {
+        @include font-size(1.4);
+    }
+}
+
+p {
+    line-height: 1.6;
+    margin: 0 0 20px;
+    @include word-wrap;
+    &:last-child {
+        margin: 0;
+    }
+}
+
+a {
+    @extend %link-property;
+    text-decoration: none;
+    @include transition(all, .7s, ease)
+}

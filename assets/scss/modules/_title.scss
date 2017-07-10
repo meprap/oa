@@ -1,0 +1,25 @@
+.title {
+    @include font($header-font, normal, 700);
+    display: block;
+    @at-root #{&}--lg {
+        @include font-size(2.2);
+        margin-bottom: 20px;
+        @include breakpoint(xs) {
+            @include font-size(2);
+        }
+    }
+    @at-root #{&}--sm {
+        @include font-size(1.8);
+        margin-bottom: 5px;
+        @include breakpoint(xs) {
+            @include font-size(1.6);
+        }
+    }
+    @at-root #{&}--xs {
+        @include font-size(1.4);
+        margin-bottom: 5px;
+        @include breakpoint(xs) {
+            @include font-size(1.4);
+        }
+    }
+}

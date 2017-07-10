@@ -1,0 +1,63 @@
+// Font Path
+//@import url('https://fonts.googleapis.com/css?family=Droid+Serif|Hind:300,400,600&subset=devanagari,latin-ext');
+
+// Color Variables
+$color-white: 	#fff;
+$color-black: 	#000;
+
+// Dark Alpha Color Swatches
+$color-10: darken($color-white, 10%);	// #e6e6e6
+$color-20: darken($color-white, 20%);	// #cccccc
+$color-30: darken($color-white, 30%);	// #b3b3b3
+$color-40: darken($color-white, 40%);	// #999999
+$color-50: darken($color-white, 50%);	// #808080
+$color-60: darken($color-white, 60%);	// #666666
+$color-70: darken($color-white, 70%);	// #4d4d4d
+$color-80: darken($color-white, 80%);	// #333333
+$color-90: darken($color-white, 90%);	// #191919
+
+// Page Properties
+// ****************************************
+
+// Brand Color
+$color-brand-primary:			#EF001D;
+$color-brand-secondary:			#2A5298;
+
+// Bootstrap Modifier
+$color-primary: 				$color-brand-secondary;
+$color-success: 				#00C853;
+$color-info: 					#80D8FF;
+$color-warning: 				#FFC107;
+$color-danger: 					$color-brand-primary;
+
+$color-background:				$color-white;
+$color-base: 					$color-60;
+
+$color-link: 					$color-brand-primary;
+$color-link-hover: 				$color-60;
+$color-visited: 				$color-60;
+$color-active: 					$color-60;
+$color-focus: 					$color-60;
+
+$color-dropdown:				$color-90;
+$color-dropdown-child-border:	$color-70;
+
+$color-off-canvas-nav:			$color-white;
+$color-off-canvas-nav-border:	$color-10;
+
+$color-border:					$color-10;
+
+$color-header:					$color-brand-secondary;
+$color-footer:					$color-brand-secondary;
+
+$bg-white:                      $color-white;
+$bg-alternative:                #E9F1FE;
+$bg-primary:                    $color-brand-primary;
+$bg-secondary:                  $color-brand-secondary;
+
+// Font Variables
+$base-font: 	'Helvetica Neue', Helvetica, Arial, sans-serif;
+$header-font: 	'Helvetica Neue', Helvetica, Arial, sans-serif;
+//$cursive-font: 	'Cookie', 'Helvetica Neue', Georgia, Times, cursive;
+//$mono-font: 	'Lucida Console', Monaco, monospace;
+$oa-icons: 	'oa-icons';

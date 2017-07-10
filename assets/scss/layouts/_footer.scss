@@ -1,0 +1,6 @@
+footer {
+    @at-root .#{&}--main {
+        padding: 0;
+        @at-root #{&}__row {}
+    }
+}

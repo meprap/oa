@@ -1,0 +1,18 @@
+#wrap {
+    width: 100%;
+    min-height: 100%;
+    height: auto !important;
+    position: relative;
+    @include transition(all, .5s, ease-out);
+    @include breakpoint(xs) {
+        &.menu {
+            right: 0;
+        }
+        &.menu-open {
+            right: 250rem;
+            #nav-slider {
+                right: 0;
+            }
+        }
+    }
+}

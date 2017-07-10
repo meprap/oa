@@ -1,0 +1,16 @@
+.bg {
+    @at-root #{&}--white {
+        background-color: $bg-white;
+    }
+    @at-root #{&}--primary {
+        background-color: $bg-primary;
+        color: $color-white;
+    }
+    @at-root #{&}--secondary {
+        background-color: $bg-secondary;
+        color: $color-white;
+    }
+    @at-root #{&}--alternative {
+        background-color: $bg-alternative;
+    }
+}

@@ -1,0 +1,439 @@
+//Font Size
+@mixin font-size($sizeValue: 1.6) {
+    font-size: ($sizeValue * 10) + px;
+    font-size: $sizeValue + rem;
+}
+
+// Font Family
+@mixin font($font, $style: normal, $weight: normal) {
+    font-family: $font;
+    font-style: $style;
+    font-weight: $weight;
+}
+
+// For using as a background under Pseudo Class
+// OA Icons [@include oa-icons;]
+@mixin oa-icons {
+    position: absolute;
+    @include font($oa-icons, normal, 400);
+}
+
+// Font Smoothing
+// @include font-smoothing(on); || @include font-smoothing(off);
+@mixin font-smoothing($value: on) {
+    @if $value==on {
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+    @if $value==off {
+        -webkit-font-smoothing: subpixel-antialiased;
+        -moz-osx-font-smoothing: auto;
+    }
+}
+
+// CSS Vendor Prefix [@include vendor-prefix(background-size, cover)]
+@mixin vendor-prefix($name, $argument) {
+    -webkit-#{$name}: #{$argument};
+    -ms-#{$name}: #{$argument};
+    -moz-#{$name}: #{$argument};
+    -o-#{$name}: #{$argument};
+    #{$name}: #{$argument};
+}
+
+// Links Mixin
+// @include links();
+@mixin links ($link, $visited, $hover, $active) {
+    & {
+        color: $link;
+        &:visited {
+            color: $visited;
+        }
+        &:hover {
+            color: $hover;
+            text-decoration: none;
+        }
+        &:active,
+        &:focus {
+            color: $active;
+            text-decoration: none;
+        }
+    }
+}
+
+// Background Image with Cover
+//  @include cover-background('path/to/img.jpg', 80%, 20%, "scroll");
+@mixin cover-background($image) {
+    background: url($image) center center no-repeat;
+    @include vendor-prefix(background-size, cover);
+}
+
+// 100% Div Cover
+@mixin coverer {
+    width: 100%;
+    height: 100%;
+}
+
+// Hiding text under the div
+@mixin hide-text {
+    overflow: hidden;
+    text-indent: -9000px;
+    display: block;
+}
+
+// Truncating Text [Multiple for Paragraraph]
+@mixin text-truncate-multiple {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: normal;
+    word-break: break-word;
+}
+
+// Truncating Text [Single]
+@mixin text-truncate-single {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+// Absolute Positioned
+// @include absPosition(15px,auto,auto,-20px);
+@mixin absPosition ($top: auto, $right: auto, $bottom: auto, $left: auto) {
+    position: absolute;
+    top: $top;
+    right: $right;
+    bottom: $bottom;
+    left: $left;
+}
+
+// Background Opacity mixin
+// Add opacity to a background color [ @include bg-opacity($color, $opacity); ]
+@mixin bg-opacity($color, $opacity) {
+    background-color: rgba($color, $opacity);
+}
+
+// Opacity
+//
+@mixin opacity($opacity) {
+    opacity: $opacity;
+    $opacity-ie: $opacity * 100;
+    filter: alpha(opacity=$opacity-ie); //IE8
+}
+
+// Border Radius
+// @include rounded(5px 5px 5px 10px); || @include rounded;
+@mixin rounded($radius) {
+    @include vendor-prefix(border-radius, $radius);
+}
+
+// 100% circle
+// @include circle(100px);
+@mixin circle($size) {
+    width: $size;
+    height: $size;
+    @include vendor-prefix(border-radius, 100%);
+}
+
+// Box Shadow [@include box-shadow(0 5px 4px black(.75)); || @include box-shadow(inset 0 5px 4px black(.75));] || @include box-shadow(inset 0 0px 0px 2px $color-15);
+@mixin box-shadow($value) {
+    @include vendor-prefix(box-shadow, $value);
+}
+
+// Text Shadow
+// @include text-shadow(0 0 0);
+@mixin text-shadow($value) {
+    @include vendor-prefix(text-shadow, $value); //text-shadow: text-shadow($value);
+}
+
+// Box Sizing [@include box-sizing(border-box);]
+@mixin box-sizing($box-model) {
+    @include vendor-prefix(box-sizing, $box-model);
+}
+
+// Calc
+// @include calc(width, “100% - 50px”);
+@mixin calc($property, $expression) {
+    #{$property}: -webkit-calc(#{$expression});
+    #{$property}: calc(#{$expression});
+}
+
+/// Columns
+// @include columns(3, 10px);
+@mixin columns($count, $gap) {
+    @include vendor-prefix('column-count', $count);
+    @include vendor-prefix('column-gap', $gap);
+}
+
+// Center-align a block level element
+@mixin center-block {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+// Display inline block cross browser
+// example: @include inline-block;
+@mixin inline-block {
+    display: -moz-inline-stack;
+    display: inline-block;
+    zoom: 1;
+    *display: inline;
+    _height: 15px;
+}
+
+// Word wrapping
+@mixin word-wrap {
+    white-space: normal;
+    word-break: initial;
+    /* For Firefix */
+    -ms-word-break: break-all;
+    word-break: break-word;
+    @include vendor-prefix('hyphens', initial);
+}
+
+// Used to @include a cursor within a pre-existing class
+@mixin cursor($cursor-type) {
+    cursor: $cursor-type;
+}
+
+@mixin cursor-class($cursor-type) {
+    .#{$cursor-type}-cursor {
+        cursor: $cursor-type;
+    }
+}
+
+// Transition @include transition(all,2s,ease-out)
+@mixin transition($what: all, $time: 0.7s, $how: ease-in-out) {
+    @include vendor-prefix(transition, $what $time $how);
+}
+
+// Apply a CSS3 transition-property
+// @include transitionProperty(opacity);
+// @include transitionProperty((height, width)); Multiple properties can be passed in surrounded by brackets
+@mixin transitionProperty($property) {
+    @include vendor-prefix(transition-property, $property);
+}
+
+// Vertically center with Table
+// @include vertical-center-tbl(130px); || @include vertical-center-tbl(100%);
+@mixin vertical-center-tbl($content) {
+    height: $content;
+    display: table;
+    >* {
+        display: table-cell;
+        vertical-align: middle;
+    }
+}
+
+// Vertically center with Absolute Position
+// @include centerer(false, true);[Centering vertically]
+// @include centerer(true, false);[Centering horizontally]
+// @include centerer;[Centering Both Side]
+@mixin centerer($horizontal: true, $vertical: true) {
+    position: absolute;
+    @if ($horizontal and $vertical) {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    @else if ($horizontal) {
+        left: 50%;
+        transform: translate(-50%, 0);
+    }
+    @else if ($vertical) {
+        top: 50%;
+        transform: translate(0, -50%);
+    }
+}
+
+// Triangle
+// @include triangle within a pseudo element and add positioning properties (ie. top, left)
+// $direction: up, down, left, right
+//@include triangle(right-side,20px,$color-dark-background);
+@mixin triangle($direction, $size, $color) {
+    content: '';
+    display: block;
+    position: absolute;
+    height: 0;
+    width: 0;
+    @if ($direction=='up') {
+        border-bottom: $size solid $color;
+        border-left: $size solid transparent;
+        border-right: $size solid transparent;
+        border-top: none;
+    }
+    @else if ($direction=='down') {
+        border-top: $size solid $color;
+        border-left: $size solid transparent;
+        border-right: $size solid transparent;
+        border-bottom: none;
+    }
+    @else if ($direction=='left') {
+        border-top: $size solid transparent;
+        border-bottom: $size solid transparent;
+        border-right: $size solid $color;
+        border-left: none;
+    }
+    @else if ($direction=='right') {
+        border-top: $size solid transparent;
+        border-bottom: $size solid transparent;
+        border-left: $size solid $color;
+        border-right: none;
+    }
+    @else if ($direction=='right-side') {
+        border-top: $size solid $color;
+        border-bottom: $size solid transparent;
+        border-left: $size solid transparent;
+        border-right: 0;
+    }
+}
+
+// Gradinets[Linear]
+// @include linearGradient-t2b($color-brand-primary, $color-brand-secondary);
+@mixin linearGradient-t2b($top, $bottom) {
+    background: $top;
+    /* Old browsers */
+    background: -moz-linear-gradient(top, $top 0%, $bottom 100%);
+    /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, $top), color-stop(100%, $bottom));
+    /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, $top 0%, $bottom 100%);
+    /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, $top 0%, $bottom 100%);
+    /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, $top 0%, $bottom 100%);
+    /* IE10+ */
+    background: linear-gradient(to bottom, $top 0%, $bottom 100%);
+    /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#000000', GradientType=0);
+    /* IE6-9 */
+}
+
+// Background Gradient: Left to Right
+// @include linearGradient-l2r($color-brand-primary, $color-brand-secondary);
+@mixin linearGradient-l2r($from-color, $to-color) {
+    background-color: mix($from-color, $to-color);
+    /* Fallback */
+    background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from($from-color), to($to-color));
+    background-image: -webkit-linear-gradient(left, $from-color, $to-color);
+    background-image: -moz-linear-gradient(left, $from-color, $to-color);
+    background-image: -ms-linear-gradient(left, $from-color, $to-color);
+    background-image: -o-linear-gradient(left, $from-color, $to-color);
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='$from-color', EndColorStr='$to-color')";
+}
+
+// Gradinets[radial]
+@mixin radialGradient($from, $to) {
+    background: -moz-radial-gradient(center, circle cover, $from 0%, $to 100%);
+    background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, $from), color-stop(100%, $to));
+    background: -webkit-radial-gradient(center, circle cover, $from 0%, $to 100%);
+    background: -o-radial-gradient(center, circle cover, $from 0%, $to 100%);
+    background: -ms-radial-gradient(center, circle cover, $from 0%, $to 100%);
+    background: radial-gradient(center, circle cover, $from 0%, $to 100%);
+    background-color: $from;
+}
+
+// Gradinets[radial]
+// @include linear-gradient-b(135deg, $color-brand-primary, $color-brand-secondary);
+// l2br: left to bottom right
+@mixin linear-gradient-l2br($args...) {
+    background-image: -o-linear-gradient($args);
+    background-image: -moz-linear-gradient($args);
+    background-image: -webkit-linear-gradient($args);
+    background-image: linear-gradient($args);
+}
+
+// Retina Images
+// @include imgRetina(logo, png, 100px, 40px); || output: logo.png; width: 100px; height: 40px;
+@mixin imgRetina($image, $extension, $width, $height) {
+    background: url($image + '.' + $extension) no-repeat;
+    width: $width;
+    height: $height;
+    @media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6/2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
+        background-image: url($image + '-2x' + '.' + $extension) no-repeat;
+        background-size: $width $height;
+    }
+}
+
+// Filters for Images [@include filter(grayscale, 100%);]
+// grayscale      ex: filter: grayscale(100%);
+// sepia          ex: filter: sepia(100%);
+// saturate       ex: filter: saturate(0%);
+// hue-rotate     ex: filter: hue-rotate(45deg);
+// invert         ex: filter: invert(100%);
+// brightness     ex: filter: brightness(15%);
+// contrast       ex: filter: contrast(200%);
+// blur           ex: filter: blur(2px);
+@mixin filter($filter-type, $filter-amount) {
+    @include vendor-prefix(filter, $filter-type+unquote('(#{$filter-amount})'));
+}
+
+// Scale
+@mixin transform($content) {
+    @include vendor-prefix(transform($content));
+}
+
+// @include first-child(){background: red;}
+@mixin first-child() {
+    &:first-of-type {
+        @content;
+    }
+}
+
+@mixin last-child() {
+    &:last-of-type {
+        @content;
+    }
+}
+
+// Text select mixin
+// For User selection [ * {@include textSelection {color: red;}} ]
+@mixin textSelection {
+    &::selection {
+        @content;
+    }
+    &::-moz-selection {
+        @content;
+    }
+}
+
+// Animation Mixin
+@mixin keyframes($name) {
+    @-webkit-keyframes #{$name} {
+        @content
+    }
+    @-moz-keyframes #{$name} {
+        @content
+    }
+    @-ms-keyframes #{$name} {
+        @content
+    }
+    @-o-keyframes #{$name} {
+        @content
+    }
+    @keyframes #{$name} {
+        @content
+    }
+}
+
+//[@include animation (loader 3s 300ms infinite ease-out);]
+@mixin animation($value) {
+    @include vendor-prefix(animation, $value);
+}
+
+// Placeholder
+@mixin placeholder {
+    &::-webkit-input-placeholder {
+        @content
+    }
+    &:-moz-placeholder {
+        @content
+    }
+    &::-moz-placeholder {
+        @content
+    }
+    &:-ms-input-placeholder {
+        @content
+    }
+}
