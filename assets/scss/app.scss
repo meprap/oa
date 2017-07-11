@@ -6,7 +6,7 @@
 	// Base
 	// Modules
 	// Layouts
-	// Themes
+	// Themes [No Themes for Small Projects]
 
 	// External
 	@import 'vendors/animate',
@@ -49,4 +49,10 @@
 	@import 'layouts/wrap',
 			'layouts/header',
 			'layouts/footer',
+			'layouts/search-wrap',
+			'layouts/how-to-order',
+			'layouts/stats-wrap',
+			'layouts/service-wrap',
+			'layouts/testimonials',
+			'layouts/contact',
 			'layouts/content';

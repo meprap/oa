@@ -1,0 +1,74 @@
+.how-to-order {
+    background-color: black(.11);
+    padding: 10px;
+    @include rounded(8px);
+    color: $color-90;
+    z-index: 99;
+    @at-root #{&}--position {
+        position: absolute;
+        top: -305px;
+    }
+    @at-root #{&}__wrap {
+        background-color: $color-white;
+        @include rounded(8px);
+        .title--sm {
+            margin-bottom: 20px;
+        }
+        .btn {
+            @include rounded(0 0 5px 5px);
+        }
+        @at-root #{&}__gutter {
+            padding: 20px 30px;
+            >ul {
+                counter-reset: my-badass-counter;
+                position: relative;
+                &:after {
+                    content: '';
+                    background: $color-70;
+                    width: 1px;
+                    height: 190px;
+                    position: absolute;
+                    top: 8px;
+                    left: 10px;
+                    z-index: 0;
+                }
+                >li {
+                    padding-left: 45px;
+                    position: relative;
+                    margin-bottom: 20px;
+                    &:before {
+                        content: counter(my-badass-counter);
+                        counter-increment: my-badass-counter;
+                        position: absolute;
+                        left: 05px;
+                        top: 3px;
+                        z-index: 1;
+                        @include font-size(2);
+                        font-weight: 600;
+                        color: $color-white;
+                        z-index: 2;
+                    }
+                    &:after {
+                        content: '';
+                        width: 42px;
+                        height: 42px;
+                        background: red;
+                        position: absolute;
+                        top: 0;
+                        left: -10px;
+                        @include rounded(100px);
+                        z-index: 1;
+                    }
+                    &:first-child {
+                        &:before {
+                            width: 0;
+                        }
+                    }
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
+                }
+            }
+        }
+    }
+}

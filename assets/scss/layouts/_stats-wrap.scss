@@ -1,0 +1,18 @@
+.stats-wrap {
+    padding: 20px 0;
+    ul {
+        li {
+            margin: 0 50px;
+        }
+    }
+    .stats-numbers {
+        display: block;
+        @include font-size(4);
+        color: $color-80;
+    }
+    small {
+        @include font-size(1.6);
+        color: $color-50;
+        text-transform: uppercase;
+    }
+}

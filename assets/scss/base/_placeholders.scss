@@ -16,10 +16,11 @@
 }
 
 %heading {
-    @include font($header-font, normal, 500);
-    margin: 0 0 15px;
+    @include font($header-font, normal, 400);
+    margin: 0 0 25px;
     line-height: 1.5;
-    text-transform: none;
+    text-transform: uppercase;
+    color: $color-80;
 }
 
 %link-property {

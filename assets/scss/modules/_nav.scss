@@ -4,12 +4,15 @@
 }
 
 .navbar-nav {
-    margin-top: 8px;
+    margin-top: 4px;
 }
 
 .navbar-brand {
     padding: 0;
     height: auto;
+    img {
+        max-width: 85%;
+    }
 }
 
 .nav-pills {

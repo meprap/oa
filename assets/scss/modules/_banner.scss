@@ -40,31 +40,30 @@
         z-index: 1;
         @include centerer;
     }
-}
-
-.carousel-indicators {
-    width: 15px;
-    height: auto;
-    margin: 0;
-    padding: 0;
-    @include centerer(false, true);
-    left: 60px;
-    bottom: auto;
-    li {
-        width: 8px;
-        height: 8px;
-        display: block;
-        margin-bottom: 15px;
-        @include transition(all, .2s, ease-out);
-        background-color: $color-info;
-        border-color: $color-info;
-        @include rounded(100px);
-        &.active {
+    .carousel-indicators {
+        width: 15px;
+        height: auto;
+        margin: 0;
+        padding: 0;
+        @include centerer(false, true);
+        left: 60px;
+        bottom: auto;
+        li {
+            width: 8px;
+            height: 8px;
+            display: block;
+            margin-bottom: 15px;
+            @include transition(all, .2s, ease-out);
             background-color: $color-info;
             border-color: $color-info;
-            margin-bottom: 15px;
-            width: 12px;
-            height: 12px;
+            @include rounded(100px);
+            &.active {
+                background-color: $color-info;
+                border-color: $color-info;
+                margin-bottom: 15px;
+                width: 12px;
+                height: 12px;
+            }
         }
     }
 }
@@ -73,6 +72,11 @@
     text-align: left;
     left: auto;
     right: auto;
+    h5 {
+        text-transform: none;
+        color: $color-white;
+        margin-bottom: 10px;
+    }
 }
 
 // For Fading Carousel

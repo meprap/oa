@@ -1,0 +1,38 @@
+.testimonials {
+    padding: 50px 0;
+    .carousel-indicators {
+        width: auto;
+        position: relative;
+        margin: 0;
+        left: auto;
+        right: auto;
+        top: auto;
+        bottom: auto;
+    }
+}
+
+.review-card {
+    padding: 0 250px;
+    @include font-size(1.6);
+}
+
+.review-author {
+    position: relative;
+    &:before {
+        content: '';
+        width: 100px;
+        height: 1px;
+        background-color: $color-40;
+        @include centerer(true, false);
+        top: -20px;
+    }
+    .ra-author {
+        @include font-size(2);
+        color: $color-70;
+        small {
+            @include font-size(1.4);
+            display: block;
+            color: $color-50;
+        }
+    }
+}

@@ -1,0 +1,20 @@
+.service-wrap {
+    padding: 20px 0 40px;
+    .thumbnail {
+        border: none;
+        margin: 0;
+        figure {
+            width: 75px;
+            height: 75px;
+            background-color: $color-brand-secondary;
+            color: $color-white;
+            @include center-block;
+            margin-bottom: 10px;
+            padding: 20px;
+            @include rounded(100px);
+            i {
+                @include font-size(3.5);
+            }
+        }
+    }
+}

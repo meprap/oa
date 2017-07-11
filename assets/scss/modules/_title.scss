@@ -1,5 +1,5 @@
 .title {
-    @include font($header-font, normal, 700);
+    @include font($header-font, normal, 400);
     display: block;
     text-transform: uppercase;
     @at-root #{&}--lg {

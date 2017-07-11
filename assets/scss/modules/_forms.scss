@@ -9,6 +9,6 @@ input[type=text],
 input[type=password],
 textarea {
     @include placeholder {
-        color: green;
+        color: $color-30;
     }
 }
