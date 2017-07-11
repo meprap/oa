@@ -1,2 +1,59 @@
-.content {
+.content {}
+
+.search-wrap {
+    padding: 30px;
+}
+
+.how-to-order {
+    background-color: black(.11);
+    padding: 10px;
+    @include rounded(8px);
+    color: $color-90;
+    z-index: 99;
+    @at-root #{&}--position {
+        position: absolute;
+        top: -305px;
+    }
+    @at-root #{&}__wrap {
+        background-color: $color-white;
+        padding: 30px;
+        @include rounded(8px);
+        .title--sm {
+            margin-bottom: 20px;
+        }
+        >ul {
+            counter-reset: my-badass-counter;
+            >li {
+                padding-left: 45px;
+                position: relative;
+                margin-bottom: 25px;
+                &:before {
+                    content: counter(my-badass-counter);
+                    counter-increment: my-badass-counter;
+                    position: absolute;
+                    left: 05px;
+                    top: 3px;
+                    z-index: 1;
+                    @include font-size(2);
+                    font-weight: 600;
+                    color: $color-white;
+                }
+                &:after {
+                    content: '';
+                    width: 42px;
+                    height: 42px;
+                    background: red;
+                    position: absolute;
+                    top: 0;
+                    left: -10px;
+                    @include rounded(100px);
+                }
+                &:first-child {
+                    &:before {
+                        width: 0;
+                    }
+                }
+            }
+        }
+    }
 }

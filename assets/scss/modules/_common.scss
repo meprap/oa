@@ -1,0 +1,9 @@
+.call-to-action {
+    @include font-size(1.6);
+    font-weight: 600;
+    color: $color-white !important;
+    i {
+        margin-right: 6px;
+        vertical-align: middle;
+    }
+}

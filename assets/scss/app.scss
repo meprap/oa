@@ -25,6 +25,7 @@
 
 	// Modules
 	@import 'modules/bg',
+			'modules/gutter',
 			'modules/buttons',
 			'modules/banner',
 			'modules/forms',
@@ -41,7 +42,8 @@
 			'modules/tables',
 			'modules/tabpanel',
 			'modules/modals',
-			'modules/title';
+			'modules/title',
+			'modules/common';
 
 	// Layouts
 	@import 'layouts/wrap',
