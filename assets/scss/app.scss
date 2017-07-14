@@ -28,6 +28,7 @@
 			'modules/gutter',
 			'modules/buttons',
 			'modules/banner',
+			'modules/carousel',
 			'modules/forms',
 			'modules/jquery.material.form',
 			'modules/graphics',
@@ -49,10 +50,12 @@
 	@import 'layouts/wrap',
 			'layouts/header',
 			'layouts/footer',
+			'layouts/content',
 			'layouts/search-wrap',
 			'layouts/how-to-order',
 			'layouts/stats-wrap',
 			'layouts/service-wrap',
 			'layouts/testimonials',
 			'layouts/contact',
-			'layouts/content';
+			'layouts/client-wrap',
+			'layouts/payment-wrap';

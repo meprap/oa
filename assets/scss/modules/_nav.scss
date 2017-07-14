@@ -35,16 +35,12 @@
 
 .collapse-icon {
     /*display: inline-block;*/
-    @include centerer(40px, 42px);
-    left: 0px;
-    margin-left: 30px;
+    @include centerer(false, true);
+    right: 0;
     line-height: 1;
     a {
-        display: block;
-        line-height: 1;
-        i {
-            line-height: 1;
-            @include font-size(3.5);
+        @include links($color-brand-primary, $color-brand-primary, $color-brand-primary, $color-brand-primary) i {
+            @include font-size(1.8);
         }
     }
 }

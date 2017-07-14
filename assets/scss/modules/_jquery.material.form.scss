@@ -11,27 +11,29 @@
         input {
             width: 100%;
             border: 0;
-            border-bottom: 1px solid $color-40;
+            border-bottom: 1px solid $color-20;
             outline: none;
             background: 0;
             float: left;
+            color: $color-90;
         }
         textarea {
             width: 100%;
             border: 0;
             background: none;
-            border-bottom: 1px solid $color-40;
+            border-bottom: 1px solid $color-20;
             outline: none;
             float: left;
             height: 80px;
             padding: 7px 0;
+            color: $color-90;
         }
         input {
             height: 32px;
         }
         label {
             line-height: 1.5;
-            color: gray;
+            color: $color-30;
             @include font-size(1.4);
             font-weight: 400;
             position: absolute;
@@ -52,7 +54,7 @@
             width: 0;
             bottom: 0;
             position: absolute;
-            background: white;
+            background: $color-80;
         }
         &:before {
             left: 50%;
@@ -77,19 +79,19 @@
             &:after,
             &:before,
             &:after {
-                background: #ff0000;
+                background: $color-brand-primary;
             }
         }
         &:focus,
         &.filled,
         &:not(.filled)~label {
-            color: red;
+            color: $color-brand-primary;
         }
     }
     .material-input {
          :focus~label,
         .filled~label {
-            color: white;
+            color: $color-50;
             font-weight: 400;
             @include font-size(1.2);
             top: 0;
@@ -97,7 +99,7 @@
         }
     }
     .error:focus~label {
-        color: lightgray;
+        color: $color-brand-primary;
         @include font-size(1.2);
         top: 0;
         line-height: 1.5;
@@ -122,13 +124,13 @@
         z-index: 2;
         font-weight: 400;
         @include font-size(1.4);
-        color: $color-base;
+        color: $color-80;
         padding-top: 5px;
     }
     .material-checkbox {
         width: 18px;
         height: 18px;
-        background: #fff;
+        background: $color-white;
         left: 0;
         top: 50%;
         margin-top: -9px;
@@ -145,7 +147,7 @@
         margin-top: -9px;
         position: absolute;
         z-index: 1;
-        border: 2px solid $color-base;
+        border: 2px solid $color-80;
         border-radius: 10px;
     }
     .material-checkbox {
@@ -155,7 +157,7 @@
             font-size: 14px;
             text-align: center;
             padding-top: 3px;
-            color: #fff;
+            color: $color-white;;
             background: gray;
             position: absolute;
             top: 0;

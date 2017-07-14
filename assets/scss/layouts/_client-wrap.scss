@@ -1,0 +1,17 @@
+.clients-wrap {
+    position: relative;
+    &:after {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: -15px;
+        background-color: $color-20;
+        width: 1px;
+        height: 100%;
+    }
+    ul {
+        li {
+            margin-bottom: 10px;
+        }
+    }
+}

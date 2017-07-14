@@ -1,0 +1,129 @@
+#myCarousel {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    .carousel-inner,
+    .carousel,
+    .item,
+    .fill {
+        height: 100%;
+    }
+    .fill {
+        width: 100%;
+        /*@include cover-background('../img/001.jpg', center center, scroll);*/
+        @include cover-background('../img/001.jpg');
+    }
+    .banner-overlay {
+        background: black(.5);
+        @include coverer;
+        @include absPosition(0, auto, auto, 0);
+        z-index: 1;
+        @include centerer;
+    }
+    .carousel-indicators {
+        width: 15px;
+        height: auto;
+        margin: 0;
+        padding: 0;
+        @include centerer(false, true);
+        left: 60px;
+        bottom: auto;
+        @include breakpoint(sm) {
+            display: none;
+        }
+        li {
+            width: 8px;
+            height: 8px;
+            display: block;
+            margin-bottom: 15px;
+            @include transition(all, .2s, ease-out);
+            background-color: $color-info;
+            border-color: $color-info;
+            @include rounded(100px);
+            &.active {
+                background-color: $color-info;
+                border-color: $color-info;
+                margin-bottom: 15px;
+                width: 12px;
+                height: 12px;
+            }
+        }
+    }
+}
+
+.carousel-caption {
+    text-align: left;
+    left: auto;
+    right: auto;
+    h5 {
+        text-transform: none;
+        color: $color-white;
+        margin-bottom: 10px;
+    }
+    @include breakpoint(md) {
+        padding: 0 350px 0 100px;
+        bottom: 35px;
+    }
+    @include breakpoint(sm) {
+        padding: 0 350px 0 0;
+    }
+}
+
+#testiCarousel-2 {
+    .carousel-indicators {
+        li {
+            border: none;
+            width: 50px;
+            height: 50px;
+            text-indent: 0;
+            margin: 0 10px;
+            position: relative;
+            @include transition(all, .5s, ease-out);
+            .overlay {
+                background-color: black(.5);
+                width: 50px;
+                height: 50px;
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index: 2;
+                @include rounded(100%);
+            }
+            img {
+                z-index: 1;
+            }
+            &.active {
+                .overlay {
+                    background-color: transparent;
+                }
+            }
+        }
+    }
+}
+
+// For Fading Carousel
+.carousel-fade {
+    .carousel-inner {
+        .item {
+            @include transitionProperty(opacity);
+        }
+        .item,
+        .active.left,
+        .active.right {
+            @include opacity(0);
+        }
+        .active,
+        .next.left,
+        .prev.right {
+            @include opacity(1);
+        }
+        .next,
+        .prev,
+        .active.left,
+        .active.right {
+            left: 0;
+            transform: translate3d(0, 0, 0);
+        }
+    }
+}

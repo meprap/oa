@@ -1,0 +1,88 @@
+.contact {
+    .quick-info {
+        @include font-size(1.5);
+        li {
+            margin-bottom: 25px;
+            padding-left: 35px;
+            padding-top: 5px;
+            color: $color-white;
+            &.location,
+            &.email,
+            &.tel {
+                position: relative;
+                &:before {
+                    @include oa-icons;
+                    @include font-size(2);
+                    color: $color-link-secondary;
+                }
+            }
+            &.location {
+                &:before {
+                    content: '\e902';
+                    top: 0;
+                    left: 4px;
+                }
+            }
+            &.email {
+                &:before {
+                    content: '\e904';
+                    top: 0;
+                    left: 0;
+                }
+            }
+            &.tel {
+                &:before {
+                    content: '\0e913';
+                    top: 0;
+                    left: 3px;
+                }
+            }
+        }
+    }
+    @at-root #{&}__default {
+        h6 {
+            color: $color-80;
+        }
+    }
+    @at-root #{&}__optional {
+        color: $color-white;
+        h6 {
+            color: $color-white;
+        }
+        .quick-info {
+            li {
+                &.location,
+                &.email,
+                &.tel {
+                    &:before {
+                        color: $color-link-secondary;
+                    }
+                }
+            }
+        }
+        .material {
+            .material-input {
+                input,
+                textarea {
+                    border-color: $color-link-secondary;
+                    color: $color-white;
+                }
+                label {
+                    color: $color-link-secondary;
+                }
+            }
+            .material-bar {
+                &:before,
+                &:after {
+                    background: $color-white;
+                }
+            }
+            .material-input {
+                 :focus~label,
+                .filled~label {
+                    color: $color-link-secondary;
+                }
+            }
+        }
+    }
+}

@@ -1,6 +1,14 @@
 footer {
+    position: relative;
     @at-root .#{&}--main {
-        padding: 0;
-        @at-root #{&}__row {}
+        @at-root #{&}__row {
+            padding: 50px 0;
+        }
+        @at-root #{&}--end {
+            border-top: 1px solid white(.2);
+            padding: 21px 0 20px;
+            color: $color-link-secondary;
+            @include font-size(1.3);
+        }
     }
 }

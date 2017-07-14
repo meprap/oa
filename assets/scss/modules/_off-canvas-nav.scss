@@ -108,3 +108,16 @@
         @include text-shadow(0 0 0);
     }
 }
+
+.menu {
+    right: 0;
+    @include transition(all, .5s, ease-out);
+}
+
+.menu-open {
+    right: 250px;
+    @include transition(all, .5s, ease-out);
+    #off-canvas-nav {
+        right: 0;
+    }
+}
