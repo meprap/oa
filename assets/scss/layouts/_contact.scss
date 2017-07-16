@@ -49,6 +49,11 @@
         h6 {
             color: $color-white;
         }
+        .contact-msg {
+            @include breakpoint(xs) {
+                margin-bottom: 50px;
+            }
+        }
         .quick-info {
             li {
                 &.location,
@@ -58,6 +63,11 @@
                         color: $color-link-secondary;
                     }
                 }
+            }
+        }
+        .quick-msg {
+            @include breakpoint(xs) {
+                float: none !important;
             }
         }
         .material {

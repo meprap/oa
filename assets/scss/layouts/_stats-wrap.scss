@@ -6,6 +6,10 @@
             @include breakpoint(sm) {
                 margin: 0 25px;
             }
+            @include breakpoint(xs) {
+                margin: 0 0 15px;
+                display: block;
+            }
         }
     }
     .stats-numbers {

@@ -1,5 +1,8 @@
 .testimonials {
-    padding: 50px 0;
+    padding: 0;
+    @include breakpoint(xs) {
+        padding: 0;
+    }
     .carousel-indicators {
         width: auto;
         position: relative;
@@ -16,6 +19,9 @@
     @include font-size(1.6);
     @include breakpoint(sm) {
         padding: 0 50px;
+    }
+    @include breakpoint(xs) {
+        padding: 0;
     }
 }
 

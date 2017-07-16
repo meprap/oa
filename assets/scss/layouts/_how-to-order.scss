@@ -7,6 +7,11 @@
     @at-root #{&}--position {
         position: absolute;
         top: -305px;
+        @include breakpoint(xs) {
+            position: relative;
+            top: 0;
+            margin: 15px 0 15px;
+        }
     }
     @at-root #{&}__wrap {
         background-color: $color-white;
@@ -76,6 +81,9 @@
                     }
                     @include breakpoint(md) {
                         margin-bottom: 15px;
+                    }
+                    @include breakpoint(xs) {
+                        margin-bottom: 45px;
                     }
                 }
             }

@@ -15,8 +15,9 @@
         top: 0;
         left: 0;
         z-index: 10;
+        @include box-shadow(inset 10px 0 19px -5px black(.25));
     }
-    &>.navbar-nav {
+    .navbar-nav {
         position: relative;
         z-index: 9;
         float: none;
@@ -33,7 +34,6 @@
                 text-transform: uppercase;
                 display: inline-block;
                 @include font-size(1.4);
-                color: $color-link;
                 line-height: 1.5;
                 @include word-wrap;
                 padding: 0 25px;
@@ -41,16 +41,11 @@
                     background-color: transparent;
                     color: $color-brand-primary;
                 }
-                &.shop-now {
-                    border-color: $color-link;
-                    margin-left: 20px;
-                    margin-bottom: 4px;
-                }
             }
             &.active {
                 a {
                     background-color: transparent;
-                    color: $color-active;
+                    color: $color-brand-primary;
                     &:hover {
                         background-color: transparent;
                         color: $color-link-hover;
@@ -102,7 +97,7 @@
         display: block;
         padding: 25px 20px 15px;
         text-align: left;
-        @include font-size(3);
+        @include font-size(2);
         color: $color-black;
         @include opacity(1);
         @include text-shadow(0 0 0);
