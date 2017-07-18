@@ -57,3 +57,11 @@ $(function () {
 		$(this).hide();
 	})
 });
+
+// Isotope Initialization
+var $container = $('.blog__post');
+
+$container.isotope({
+    // options
+    itemSelector: '.blog__post__card'
+});

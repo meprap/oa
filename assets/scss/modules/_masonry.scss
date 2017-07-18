@@ -1,19 +1,17 @@
-.maso-wrap {
+.blog__post {
     width: 100%;
-    margin-bottom: 30px;
-    .box {
-        width: 25%;
-        margin: 0 0 4px;
-        padding: 0 2px;
+    margin: 0 -15px 30px;
+    &__card {
+        width: 33.333333%;
+        padding: 0 15px;
         img {
-            width: 100%;
+            width: 75px;
         }
         @include breakpoint(sm) {
-            width: 33.333333%;
+            width: 50%;
         }
         @include breakpoint(xs) {
             width: 100%;
-            margin-bottom: 30px;
         }
     }
 }

@@ -1,1 +1,21 @@
-.content {}
+.content {
+    @at-root #{&}__gutter-up-down {
+        padding-top: 50px;
+        padding-bottom: 50px;
+        @include breakpoint(xs) {
+            padding: 50px 0;
+        }
+    }
+    @at-root #{&}__gutter-left-right {
+        padding-left: 100px;
+        padding-right: 100px;
+        @include breakpoint(xs) {
+            padding: 50px 0;
+        }
+    }
+    blockquote {
+        padding: 0 0 0 30px;
+        line-height: 1.8;
+        @include font-size(1.6);
+    }
+}
