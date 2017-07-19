@@ -1,0 +1,15 @@
+.sidebar {
+    @at-root #{&}__block {
+        margin-bottom: 30px;
+    }
+}
+
+.categories {
+    &>li {
+        margin-bottom: 10px;
+        font-weight: 500;
+        i {
+            margin-right: 10px;
+        }
+    }
+}

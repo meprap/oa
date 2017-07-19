@@ -19,7 +19,7 @@
     @include font($header-font, normal, 400);
     margin: 0 0 25px;
     line-height: 1.5;
-    text-transform: uppercase;
+    text-transform: none;
     color: $color-80;
 }
 

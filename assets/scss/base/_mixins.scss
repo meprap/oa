@@ -42,7 +42,7 @@
 
 // Links Mixin
 // @include links();
-@mixin links ($link, $visited, $hover, $active) {
+@mixin links($link, $visited, $hover, $active) {
     & {
         color: $link;
         &:visited {
@@ -190,6 +190,20 @@
     -ms-word-break: break-all;
     word-break: break-word;
     @include vendor-prefix('hyphens', initial);
+}
+
+// Multiline ellipsis
+// @include ellipsis(2rem, 2);
+@mixin ellipsis ($max-height, $lines: 2) {
+    // Fallback for non-webkit browsers.
+    // Fallback does not render ellipsis.
+    overflow: hidden;
+    max-height: $max-height; // Webkit solution for multiline ellipsis
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: $lines; // Solution for Opera
+    text-overflow: -o-ellipsis-lastline;
+    text-overflow: ellipsis;
 }
 
 // Used to @include a cursor within a pre-existing class

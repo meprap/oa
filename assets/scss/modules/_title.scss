@@ -1,7 +1,6 @@
 .title {
     @include font($header-font, normal, 400);
     display: block;
-    text-transform: uppercase;
     @at-root #{&}--lg {
         @include font-size(2.2);
         margin-bottom: 20px;

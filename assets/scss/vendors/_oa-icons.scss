@@ -26,6 +26,16 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.oa-eye {
+  &:before {
+    content: $oa-eye;
+  }
+}
+.oa-chat_bubble {
+  &:before {
+    content: $oa-chat_bubble;
+  }
+}
 .oa-close {
   &:before {
     content: $oa-close;

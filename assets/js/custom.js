@@ -59,9 +59,9 @@ $(function () {
 });
 
 // Isotope Initialization
-var $container = $('.blog__post');
+var $container = $('.masonary');
 
 $container.isotope({
     // options
-    itemSelector: '.blog__post__card'
+    itemSelector: '.masonary__grid'
 });
