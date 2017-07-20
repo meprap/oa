@@ -1,0 +1,42 @@
+.modal {
+    &__lg {
+        .modal-dialog {
+            width: 1020px;
+        }
+    }
+    &__md {
+        .modal-dialog {
+            width: 920px;
+        }
+    }
+    &__sm {
+        .modal-dialog {
+            width: 500px;
+        }
+    }
+}
+
+.modal-header {
+    background-color: $color-black;
+    border: none;
+    padding: 10px 20px;
+    position: relative;
+    .close {
+        @include opacity(1);
+        @include text-shadow(0 0 0);
+        @include font-size(1.5);
+        color: $color-white;
+        @include centerer(false, true);
+        right: 20px;
+        margin: 0;
+    }
+}
+
+.modal-title {
+    @include font-size(2);
+    color: $color-white;
+}
+
+.modal-body {
+    padding: 0;
+}

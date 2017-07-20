@@ -5,7 +5,6 @@
             margin-bottom: 25px;
             padding-left: 35px;
             padding-top: 5px;
-            color: $color-white;
             &.location,
             &.email,
             &.tel {
@@ -13,7 +12,6 @@
                 &:before {
                     @include oa-icons;
                     @include font-size(2);
-                    color: $color-link-secondary;
                 }
             }
             &.location {
@@ -41,7 +39,11 @@
     }
     @at-root #{&}__default {
         h6 {
-            color: $color-80;
+            color: $color-90;
+            margin-bottom: 10px;
+        }
+        .quick-info {
+            li {}
         }
     }
     @at-root #{&}__optional {
