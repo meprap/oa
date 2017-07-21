@@ -2,16 +2,25 @@
     &__lg {
         .modal-dialog {
             width: 1020px;
+            @include breakpoint(xs) {
+                width: auto;
+            }
         }
     }
     &__md {
         .modal-dialog {
             width: 920px;
+            @include breakpoint(xs) {
+                width: auto;
+            }
         }
     }
     &__sm {
         .modal-dialog {
             width: 500px;
+            @include breakpoint(xs) {
+                width: auto;
+            }
         }
     }
 }

@@ -8,3 +8,33 @@
     }
 }
 
+.or-seprator {
+    height: 55px;
+    display: block;
+    position: relative;
+    &:before {
+        content: 'OR';
+        color: $color-white;
+        background-color: $color-brand-primary;
+        border: 10px solid $color-white;
+        width: 55px;
+        height: 55px;
+        @include rounded(100%);
+        padding-top: 9px;
+        text-align: center;
+        @include font-size(1.2);
+        z-index: 2;
+        @include centerer(true, false);
+    }
+    &:after {
+        content: '';
+        position: absolute;
+        top: 28px;
+        width: 100%;
+        height: 1px;
+        @include font-size(0);
+        line-height: 0;
+        background-color: $color-10;
+        z-index: 1;
+    }
+}

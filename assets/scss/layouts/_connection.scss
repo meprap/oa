@@ -1,0 +1,32 @@
+.connection {
+    //@include vertical-center-tbl(100%);
+    .title {
+        color: $color-90;
+    }
+    .login {
+        margin-right: 15px;
+        @include breakpoint(xs) {
+            margin-right: 0;
+            margin-bottom: 50px;
+        }
+    }
+    .register {
+        margin-left: 15px;
+        @include breakpoint(xs) {
+            margin-left: 0;
+        }
+        .oa-facebook {
+            background-color: $color-white;
+            width: 18px;
+            height: 18px;
+            padding: 2px 0 0;
+            color: $color-brand-secondary;
+            @include font-size(1.5);
+            @include rounded(4px);
+            @include inline-block;
+            vertical-align: middle;
+            text-align: center;
+            margin-right: 10px;
+        }
+    }
+}
