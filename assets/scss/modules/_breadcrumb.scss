@@ -18,6 +18,11 @@
     a {
         @include links($color-link, $color-link, $color-link-hover, $color-active);
     }
+    &>li {
+        &:first-child {
+            padding-left: 0;
+        }
+    }
     &>li+li {
         &:before {
             padding: 0 10px 0 2px;

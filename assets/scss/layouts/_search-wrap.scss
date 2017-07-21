@@ -3,6 +3,19 @@
     @include breakpoint(md) {
         padding: 30px 0;
     }
+    @include breakpoint(sm) {
+        padding: 30px 0 10px;
+        .form-inline {
+            .form-group {
+                display: block;
+                margin: 0 0 10px !important;
+                padding: 0;
+                .input-group {
+                    width: 100%;
+                }
+            }
+        }
+    }
     @include breakpoint(xs) {
         padding: 30px 0;
     }
@@ -16,7 +29,7 @@
             width: 275px;
         }
         @include breakpoint(sm) {
-            width: 275px;
+            width: 100%;
         }
         @include breakpoint(xs) {
             width: 100%;
@@ -32,6 +45,22 @@
             padding: 10px 15px;
         }
     }
+    @at-root #{&}--content {
+        .search-input {
+            width: 400px;
+            @include breakpoint(sm) {
+                width: 100%;
+            }
+        }
+        .input-group-addon {
+            .btn {
+                padding: 10px 25px;
+            }
+        }
+        .file-upload {
+            padding: 15px 35px;
+        }
+    }
 }
 
 .file-upload {
@@ -42,6 +71,7 @@
         padding: 15px;
     }
     @include breakpoint(sm) {
+        width: 100%;
     }
     @include breakpoint(xs) {
         width: 100%;
