@@ -51,6 +51,9 @@
             @include breakpoint(sm) {
                 width: 100%;
             }
+            @include breakpoint(xs) {
+                width: 100%;
+            }
         }
         .input-group-addon {
             .btn {

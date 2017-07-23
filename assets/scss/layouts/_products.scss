@@ -1,0 +1,80 @@
+.products {}
+
+.first-aid-box {
+    header {
+        //background-color: $color-brand-secondary;
+        color: $color-white;
+        padding: 15px 10px 25px;
+        @include rounded(10px 10px 0 0);
+        @include linear-gradient-l2br(135deg, #1E3C72, #3B66B2);
+    }
+    h6 {
+        margin: 0;
+        color: $color-white;
+        @include font-size(1.8);
+        font-weight: 600;
+        small {
+            display: block;
+            line-height: 1.5;
+            &.text-info {
+                color: $color-warning;
+                @include font-size(1.6);
+                letter-spacing: 1px;
+            }
+            &.text-size {
+                color: $color-info;
+                @include font-size(1.2);
+            }
+        }
+    }
+    .list-medicines {
+        li {
+            margin-bottom: 10px;
+            position: relative;
+            padding-left: 25px;
+            &:before {
+                content: '\e901';
+                @include oa-icons;
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
+        }
+    }
+    figure {
+        position: relative;
+        .price-tag,
+        .price {
+            position: absolute;
+        }
+        .price-tag {
+            top: -15px;
+            left: -16px;
+        }
+        .price {
+            position: absolute;
+            top: -12px;
+            left: 0;
+            @include font-size(1.6);
+            font-weight: 500;
+            color: $color-white;
+            .market-price,
+            .offered-price {
+                @include inline-block;
+                vertical-align: middle;
+            }
+            .market-price {
+                text-decoration: line-through;
+                @include font-size(1.3);
+            }
+            .offered-price {
+                font-weight: 600;
+                @include font-size(1.8);
+            }
+        }
+    }
+    .caption {
+        background-color: black(.05);
+        padding: 20px;;
+    }
+}
