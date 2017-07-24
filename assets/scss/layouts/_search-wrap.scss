@@ -91,3 +91,16 @@
         margin: 0 0 10px;
     }
 }
+
+.product-list {
+    &__border {
+        border-bottom: 1px solid $color-border;
+        padding-bottom: 35px;
+    }
+    .price {
+        @include font-size(2.5);
+        font-weight: 600;
+        color: $color-brand-secondary;
+        display: block;
+    }
+}

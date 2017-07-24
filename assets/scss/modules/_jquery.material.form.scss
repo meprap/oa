@@ -250,10 +250,11 @@
             label strong {
                 position: relative;
                     &:after {
-                        content: '\e906';
+                        content: '\e910';
                         position: absolute;
+                        top: 2px;
                         @include oa-icons;
-                        @include font-size(2);
+                        @include font-size(1.2);
                         left: 5px;
                         line-height: 1.2;
                     }
