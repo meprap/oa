@@ -1,0 +1,88 @@
+.steps-wrap {
+    .step {
+        counter-reset: my-badass-counter;
+        width: auto;
+        position: relative;
+        overflow: hidden;
+        display: inline-block;
+        @extend %list-none;
+        @include font-size(1.5);
+        font-weight: 600;
+        >li {
+            width: 190px;
+            display: inline-block;
+            vertical-align: top;
+            margin: 0 30px;
+            text-align: center;
+            position: relative;
+            @include breakpoint(xs) {
+                width: 40px;
+            }
+            &:before {
+                content: '';
+                width: 175px;
+                height: 1px;
+                background: black(.4);
+                position: absolute;
+                top: 18px;
+                left: -120px;
+                z-index: 0;
+                @include breakpoint(xs) {
+                    width: 85px;
+                    left: -63px;
+                    z-index: -1;
+                }
+            }
+            &:first-child {
+                &:before {
+                    width: 0;
+                }
+            }
+        }
+    }
+    .add-photo {
+        background-color: $color-brand-secondary;
+        color: $color-white;
+        width: 35px;
+        height: 35px;
+        display: block;
+        position: relative;
+        margin: 0 auto;
+        @include rounded(100%);
+        &:before {
+            content: '\e91e';
+            @include oa-icons;
+            @include font-size(2);
+            @include centerer;
+        }
+    }
+}
+
+.step-circle {
+    border: 2px solid;
+    width: 35px;
+    height: 35px;
+    @include rounded(100px);
+    display: block;
+    margin: 0 auto 15px;
+    &:before {
+        content: counter(my-badass-counter);
+        counter-increment: my-badass-counter;
+        @include font-size(2);
+        color: $color-white;
+    }
+    @at-root &__active {
+        background-color: $color-brand-secondary;
+        border-color: black(.3);
+    }
+    @at-root &__passive {
+        background-color: lighten($color-brand-secondary, 50%);
+        border-color: transparent;
+    }
+}
+
+.step-1-wrap {}
+
+.step-2-wrap {}
+
+.step-3-wrap {}

@@ -1,17 +1,18 @@
 .dropdown-menu {
-    width: 200px;
-    background: $color-dropdown;
     border: 0;
     padding: 0;
+    margin-top: 11px;
     &>li {
-        border-bottom: 1px solid $color-dropdown-child-border;
+        border-bottom: 1px solid $color-10;
         &>a {
-            color: $color-white;
+            background-color: $color-white;
+            color: $color-90;
             padding: 10px 20px;
             @include word-wrap;
+            text-align: right;
+            @include links($color-90, $color-90, $color-white, $color-90);
             &:hover {
-                background: darken($color-dropdown, 30%);
-                color: $color-brand-primary;
+                background: $color-brand-secondary;
             }
         }
         &:last-child {
