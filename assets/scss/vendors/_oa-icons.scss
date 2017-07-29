@@ -1,8 +1,8 @@
 @import "oa-icons/variables";
 @font-face {
     font-family: 'onlineaushadhi';
-    src : url('#{$oa-font-path}/onlineaushadhi.eot?lnl21g');
-    src : url('#{$oa-font-path}/onlineaushadhi.eot?lnl21g#iefix') format('embedded-opentype'),
+    src: url('#{$oa-font-path}/onlineaushadhi.eot?lnl21g');
+    src: url('#{$oa-font-path}/onlineaushadhi.eot?lnl21g#iefix') format('embedded-opentype'),
     url('#{$oa-font-path}/onlineaushadhi.ttf?lnl21g') format('truetype'),
     url('#{$oa-font-path}/onlineaushadhi.woff?lnl21g') format('woff'),
     url('#{$oa-font-path}/onlineaushadhi.svg?lnl21g#onlineaushadhi') format('svg');
@@ -25,6 +25,24 @@
     -moz-osx-font-smoothing: grayscale;
 }
 
+.oa-info {
+    &:before {
+        content: $oa-info;
+    }
+}
+
+.oa-trash {
+    &:before {
+        content: $oa-trash;
+    }
+}
+
+.oa-document-add {
+    &:before {
+        content: $oa-document-add;
+    }
+}
+
 .oa-cart {
     &:before {
         content: $oa-cart;
@@ -43,9 +61,21 @@
     }
 }
 
-.oa-document-add {
+.oa-off {
     &:before {
-        content: $oa-document-add;
+        content: $oa-off;
+    }
+}
+
+.oa-edit {
+    &:before {
+        content: $oa-edit;
+    }
+}
+
+.oa-user {
+    &:before {
+        content: $oa-user;
     }
 }
 
@@ -194,7 +224,7 @@
 }
 
 .oa-twitter {
-    oa &:before {
+    &:before {
         content: $oa-twitter;
     }
 }

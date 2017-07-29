@@ -152,85 +152,195 @@
                             <div class="row">
                                 <div class="col-lg-12">
                                     <h5>
-                                        Upload your prescription
+                                        Account Information
                                         <br>
                                     </h5>
                                     <hr class="m-b-35">
                                 </div>
                             </div>
-                            <div class="row">
-                                <div class="col-lg-12 steps-wrap">
-                                    <form action="" class="material">
-                                        <div class="text-center">
-                                            <ul class="step m-b-45">
-                                                <li>
-                                                    <span class="step-circle step-circle__active"></span> <span class="text-block hidden-xs">Upload Prescription</span>
-                                                </li>
-                                                <li>
-                                                    <span class="step-circle step-circle__passive"></span> <span class="text-block hidden-xs">Login/Register</span>
-                                                </li>
-                                                <li>
-                                                    <span class="step-circle step-circle__passive"></span> <span class="text-block hidden-xs">Confirm Delivery Details</span>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <section class="step-1-wrap">
-                                            <div class="title title--sm m-b-25">Upload Your Prescription (click below to select a file to upload) .</div>
-                                            <hr class="m-b-35">
-                                            <div class="row">
-                                                <div class="col-lg-6 col-md-6 col-sm-6">
-                                                    <div class="row m-b-25">
-                                                        <div class="col-lg-10 col-md-10 col-sm-9 col-xs-10"><input type="file" name="myfile" /></div>
-                                                        <div class="col-lg-2 col-md-2 col-sm-3 col-xs-2"><a href="#" class="add-photo"></a></div>
-                                                    </div>
-                                                    <div class="row m-b-25">
-                                                        <div class="col-lg-10 col-md-10 col-sm-9 col-xs-10"><input type="file" name="myfile" /></div>
-                                                        <div class="col-lg-2 col-md-2 col-sm-3 col-xs-2"><a href="#" class="add-photo"></a></div>
-                                                    </div>
+                            <div class="account-wrap">
+                                <div class="row">
+                                    <div class="col-lg-3 col-md-3 col-sm-4">
+                                        <!-- Nav tabs -->
+                                        <ul class="nav nav-tabs m-b-25" role="tablist">
+                                            <li role="presentation" class="active"><a href="#personal-info" aria-controls="home" role="tab" data-toggle="tab">My Personal Information</a></li>
+                                            <li role="presentation"><a href="#prescription" aria-controls="profile" role="tab" data-toggle="tab">Prescription/ Lab reports</a></li>
+                                            <li role="presentation"><a href="#history" aria-controls="messages" role="tab" data-toggle="tab">Order History</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-lg-9 col-md-9 col-sm-8">
+                                        <!-- Tab panes -->
+                                        <div class="tab-content">
+                                            <div role="tabpanel" class="tab-pane active" id="personal-info">
+                                                <div class="personal-info">
+                                                    <span class="title title--sm">Please be sure to update your personal information if it has changed.</span>
                                                     <hr>
-                                                    <div class="row m-b-35">
-                                                        <div class="col-lg-12">
-                                                            <button class="btn btn-danger btn-md">Proceed</button>
-                                                        </div>
+                                                    <dl class="dl-horizontal">
+                                                        <dt>Full Name:</dt>
+                                                        <dd>Jambu Prasad Bhothey</dd>
+                                                        <dt>Email ID:</dt>
+                                                        <dd>jambuprsbhotey@gmail.com</dd>
+                                                        <dt>Landline Number:</dt>
+                                                        <dd>01-4567899</dd>
+                                                        <dt>Mobile Number:</dt>
+                                                        <dd>9851054321</dd>
+                                                        <dt>Location:</dt>
+                                                        <dd>Battisputali-09, Kathmandu, Nepal</dd>
+                                                    </dl>
+                                                    <hr>
+                                                    <a href="#" class="btn btn-danger">Update Information</a>
+                                                </div>
+                                            </div>
+                                            <div role="tabpanel" class="tab-pane" id="prescription">
+                                                <div class="prescription">
+                                                    <span class="title title--sm">Your Prescription</span>
+                                                    <hr>
+                                                    <div class="table-responsive">
+                                                        <table class="table table-hover">
+                                                            <thead>
+                                                                <tr class="info">
+                                                                    <th>Prescription ID</th>
+                                                                    <th>Prescription</th>
+                                                                    <th>Date</th>
+                                                                    <th>Order ID</th>
+                                                                    <th>Order Status</th>
+                                                                    <th>Action</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td>Rx16600137.png</td>
+                                                                    <td>
+                                                                        <figure class="prescription-img">
+                                                                            <a href="#"><img src="assets/img/m-002.png" alt=""></a>
+                                                                        </figure>
+                                                                    </td>
+                                                                    <td>25July2017</td>
+                                                                    <td>-</td>
+                                                                    <td>Cancelled</td>
+                                                                    <td>
+                                                                        <a href="#"><i class="oa-trash"></i></a>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>Rx16600137.png</td>
+                                                                    <td>
+                                                                        <figure class="prescription-img">
+                                                                            <a href="#"><img src="assets/img/m-002.png" alt=""></a>
+                                                                        </figure>
+                                                                    </td>
+                                                                    <td>25July2017</td>
+                                                                    <td>-</td>
+                                                                    <td>Cancelled</td>
+                                                                    <td>
+                                                                        <a href="#"><i class="oa-trash"></i></a>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>Rx16600137.png</td>
+                                                                    <td>
+                                                                        <figure class="prescription-img">
+                                                                            <a href="#"><img src="assets/img/m-002.png" alt=""></a>
+                                                                        </figure>
+                                                                    </td>
+                                                                    <td>25July2017</td>
+                                                                    <td>-</td>
+                                                                    <td>Cancelled</td>
+                                                                    <td>
+                                                                        <a href="#"><i class="oa-trash"></i></a>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>Rx16600137.png</td>
+                                                                    <td>
+                                                                        <figure class="prescription-img">
+                                                                            <a href="#"><img src="assets/img/m-002.png" alt=""></a>
+                                                                        </figure>
+                                                                    </td>
+                                                                    <td>25July2017</td>
+                                                                    <td>-</td>
+                                                                    <td>Cancelled</td>
+                                                                    <td>
+                                                                        <a href="#"><i class="oa-trash"></i></a>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>Rx16600137.png</td>
+                                                                    <td>
+                                                                        <figure class="prescription-img">
+                                                                            <a href="#"><img src="assets/img/m-002.png" alt=""></a>
+                                                                        </figure>
+                                                                    </td>
+                                                                    <td>25July2017</td>
+                                                                    <td>-</td>
+                                                                    <td>Cancelled</td>
+                                                                    <td>
+                                                                        <a href="#"><i class="oa-trash"></i></a>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
                                                     </div>
                                                 </div>
-                                                <div class="col-lg-6 col-md-6 col-sm-6">
-                                                    <span class="title title--md">Instructions</span>
-                                                    <ol class="more-gutter">
-                                                        <li>Ensure that the picture or scan is such that the entire prescription
-                                                            is visible (including the doctor/clinic’s letterhead).</li>
-                                                        <li>Ensure that the picture is taken in a way that the handwriting/type
-                                                            is visible clearly.</li>
-                                                        <li>The file size should not exceed 10 MB.</li>
-                                                        <li>Ensure that the prescription is valid. Your family member or a caregiver
-                                                            can place order for prescription medicines on your behalf.</li>
-                                                        <li>You can upload a total of 4 prescriptions per order.</li>
-                                                        <li>Please be sure to also upload the back-side image of your prescription,
-                                                            if present.</li>
-                                                    </ol>
+                                            </div>
+                                            <div role="tabpanel" class="tab-pane" id="history">
+                                                <div class="history">
+                                                    <span class="title title--sm">Table Design</span>
+                                                    <hr>
+                                                    <div class="table-responsive">
+                                                        <table class="table table-striped">
+                                                            <thead>
+                                                                <tr class="info">
+                                                                    <th>#</th>
+                                                                    <th>Lorem Ipsum</th>
+                                                                    <th>Lorem Ipsum</th>
+                                                                    <th>Lorem Ipsum</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td>1</td>
+                                                                    <td>asdfa</td>
+                                                                    <td>asdfa</td>
+                                                                    <td>asdfa</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>2</td>
+                                                                    <td>asdfa</td>
+                                                                    <td>asdfa</td>
+                                                                    <td>asdfa</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>3</td>
+                                                                    <td>asdfa</td>
+                                                                    <td>asdfa</td>
+                                                                    <td>asdfa</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>4</td>
+                                                                    <td>asdfa</td>
+                                                                    <td>asdfa</td>
+                                                                    <td>asdfa</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>5</td>
+                                                                    <td>asdfa</td>
+                                                                    <td>asdfa</td>
+                                                                    <td>asdfa</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>6</td>
+                                                                    <td>asdfa</td>
+                                                                    <td>asdfa</td>
+                                                                    <td>asdfa</td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
                                                 </div>
                                             </div>
-                                        </section>
-                                        <section class="step-2-wrap hidden">fasdf</section>
-                                        <section class="step-3-wrap hidden">fasdf</section>
-                                        <hr>
-                                        <div class="row">
-                                            <div class="col-lg-12 text-muted">
-                                                <span class="title title--sm">Note:</span>
-                                                <ul class="more-gutter">
-                                                    <li>asdfAlternatively, you can send us a picture or scan of your prescription
-                                                        by email rx@netmeds.com or WhatsApp +91 78710 30304, or fax (022)-6645
-                                                        9080.a
-                                                    </li>
-                                                    <li>Please remember to quote your order ID on the top of your digital prescription,
-                                                        if you have already placed your order without submitting your prescription.</li>
-                                                    <li>Once you have uploaded your prescription, we will email you and also
-                                                        send an SMS to your registered mobile number to confirm the receipt
-                                                        of your prescription.</li>
-                                                </ul>
-                                            </div>
                                         </div>
-                                    </form>
+                                    </div>
                                 </div>
                             </div>
                         </div>

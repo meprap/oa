@@ -1,0 +1,72 @@
+.account-wrap {
+    .nav-tabs {
+        padding-top: 0;
+        li {
+            float: none;
+            display: block;
+            margin: 0 0 1px;
+            a {
+                background-color: $color-10;
+                border: none;
+                @include font-size(1.4);
+                font-weight: 600;
+                margin: 0;
+                display: block;
+                text-align: right;
+                padding: 10px 25px 10px 10px;
+                @include rounded(0);
+                position: relative;
+                &:hover {
+                    background-color: $color-brand-primary;
+                    color: $color-white;
+                }
+            }
+            &.active {
+                a {
+                    background-color: $color-brand-secondary;
+                    border: none;
+                    color: $color-white;
+                    &:after {
+                        content: '';
+                        @include triangle(left, 10px, $color-white);
+                        @include centerer(false, true);
+                        right: -1px;
+                    }
+                }
+            }
+            &:after {
+                display: none;
+            }
+        }
+    }
+    .personal-info {
+        .dl-horizontal {
+            @include font-size(1.5);
+            dt,
+            dd {
+                margin-bottom: 10px;
+            }
+            dt {
+                text-align: left;
+            }
+            dd {}
+        }
+    }
+    .prescription {
+        .oa-trash {
+            @include font-size(2);
+        }
+        .prescription-img {
+            max-width: 65px;
+            border: 1px dashed $color-20;
+            text-align: center;
+            padding: 2px;
+            img {
+                max-width: 50px;
+            }
+            &:hover {
+                border-color: $color-70;
+            }
+        }
+    }
+}

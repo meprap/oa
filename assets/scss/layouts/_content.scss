@@ -1,9 +1,9 @@
 .content {
     @at-root #{&}__gutter-up-down {
-        padding-top: 50px;
-        padding-bottom: 50px;
+        padding-top: 35px;
+        padding-bottom: 35px;
         @include breakpoint(xs) {
-            padding: 50px 0;
+            padding: 35px 0;
         }
     }
     @at-root #{&}__gutter-left-right {

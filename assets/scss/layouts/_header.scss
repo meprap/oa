@@ -21,7 +21,7 @@ header {
         }
     }
      @at-root .#{&}__brand-wrap {
-         padding: 20px 0;
+         padding: 15px 0;
          @include breakpoint(sm) {
              padding: 15px 0;
          }

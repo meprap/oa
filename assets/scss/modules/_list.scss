@@ -1,0 +1,11 @@
+ul,
+ol {
+    &.more-gutter {
+        li {
+            margin-bottom: 10px;
+            @include last-child() {
+                margin-bottom: 0;
+            }
+        }
+    }
+}
